@@ -1,0 +1,155 @@
+/* 阿里巴巴普惠体 */
+@font-face {
+  font-family: "AlibabaPuHuiTiB";
+  src: url("./ALIBABA-PUHUITI/ALIBABA-PUHUITI-BOLD.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiH";
+  src: url("./ALIBABA-PUHUITI/ALIBABA-PUHUITI-HEAVY.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiL";
+  src: url("./ALIBABA-PUHUITI/ALIBABA-PUHUITI-LIGHT.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiM";
+  src: url("./ALIBABA-PUHUITI/ALIBABA-PUHUITI-MEDIUM.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiR";
+  src: url("./ALIBABA-PUHUITI/ALIBABA-PUHUITI-REGULAR.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTi";
+  src: url("./ALIBABA-PUHUITI/albbphtH.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 思源黑体 */
+@font-face {
+  font-family: "SourceHanSansCNB";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNE";
+  src: url("./SourceHanSansCN/SourceHanSansCN-ExtraLight.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNH";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNH";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNM";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNN";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Normal.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSansCNR";
+  src: url("./SourceHanSansCN/SourceHanSansCN-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 思源宋体 */
+@font-face {
+  font-family: "SourceHanSerifCNB";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNE";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-ExtraLight.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNH";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNL";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNM";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNR";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceHanSerifCNS";
+  src: url("./SourceHanSerifCN/SourceHanSerifCN-SemiBold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* D_DIN */
+@font-face {
+  font-family: "DIN";
+  src: url("./D-DIN.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DINB";
+  src: url("./D-DIN-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 胡晓波男神体 */
+@font-face {
+  font-family: "HuXiaoBo";
+  src: url("./hxbnst.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 优设标题黑 */
+@font-face {
+  font-family: "YouSheBiaoTiHei";
+  src: url("./ysbth.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

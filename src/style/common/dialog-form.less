@@ -1,0 +1,526 @@
+.el-overlay-dialog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .el-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #303030;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding-top: 0;
+    --el-dialog-padding-primary: 16px 16px 24px;
+    --el-border-radius-base: 2px;
+
+    .el-dialog__header {
+      height: 54px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-family: AlibabaPuHuiTiM;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .el-dialog__headerbtn {
+        position: unset;
+        height: 16px;
+        width: 16px;
+
+        .el-icon {
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .el-dialog__body {
+      padding-top: 23px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .el-dialog__footer {
+      padding-right: 24px;
+    }
+  }
+}
+
+.el-form {
+  .el-form-item {
+    margin-bottom: 32px;
+
+    .el-form-item__label {
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .el-input {
+      height: 36px;
+      background-color: transparent;
+      border-radius: 4px;
+
+      .el-input__wrapper {
+        background-color: transparent;
+        box-shadow: 0 0 0 1px #646464;
+
+        input {
+          font-family: AlibabaPuHuiTiR;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    .el-select {
+      height: 36px;
+      background-color: transparent;
+      border-radius: 4px;
+
+      .el-select__wrapper {
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 1px #646464;
+
+        .el-select__selected-item {
+          font-family: AlibabaPuHuiTiR;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    &.is-error {
+      .input-button,
+      .el-input__wrapper {
+        box-shadow: 0 0 0 1px #ff2222;
+      }
+    }
+    .el-textarea {
+      background-color: transparent;
+      border-radius: 4px;
+
+      textarea {
+        background-color: transparent;
+        box-shadow: 0 0 0 1px #646464;
+        font-family: "SourceHanSansCN";
+        font-weight: 400;
+        font-size: 14px;
+        color: #e3e3e3;
+      }
+    }
+
+    .el-form-item__error {
+      font-family: "AlibabaPuHuiTiR";
+      font-weight: 400;
+      font-size: 12px;
+      color: #ff2222;
+      display: flex;
+      margin-top: 6px;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-image: url("^/warning.png");
+        background-size: 100% 100%;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.button-upload {
+  margin-bottom: 22px;
+}
+
+.dialog-upload {
+  width: 100%;
+  display: flex;
+  font-family: "SourceHanSansCN";
+  font-size: 14px;
+  color: #b2b2b2;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 20px 0 20px 20px;
+
+  :first-child {
+    width: 70%;
+  }
+
+  :last-child {
+    width: 30%;
+  }
+}
+
+.table-upload {
+  width: 100%;
+  height: 206px;
+  position: relative;
+
+  * {
+    cursor: default;
+  }
+
+  .el-upload.is-drag {
+    display: inline-flex;
+    width: 100%;
+    position: absolute;
+    .el-upload-dragger {
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      border: unset;
+    }
+    .border-div {
+      width: 100%;
+      height: 206px;
+      border-radius: 4px;
+      border: 1px dashed #646464;
+      border-top-style: solid;
+      border-bottom-style: solid;
+
+      &.no-file {
+        border-top-style: dashed;
+        border-bottom-style: dashed;
+      }
+
+      .tip {
+        width: 100%;
+        height: 100%;
+        line-height: 206px;
+        text-align: center;
+        font-family: "SourceHanSansCN";
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  .table-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .el-scrollbar__view {
+      .file-list {
+        display: flex;
+        height: 46px;
+        padding: 13px 0 13px 20px;
+        border-bottom: 1px solid #646464;
+
+        div {
+          height: 20px;
+          line-height: 20px;
+        }
+
+        & > :first-child {
+          width: 70%;
+          font-family: "SourceHanSansCN";
+          font-size: 14px;
+          color: #e3e3e3;
+        }
+
+        & > :last-child {
+          width: 30%;
+          display: flex;
+          justify-content: space-between;
+          padding-right: 24px;
+
+          .progress {
+            width: 46px;
+            background-size: 16px 16px;
+            margin-right: 9px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            text-align: right;
+            font-family: "SourceHanSansCN";
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+
+            &.loading {
+              font-family: "SourceHanSansCN";
+              font-weight: 500;
+              font-size: 12px;
+              color: #51a8ff;
+              display: flex;
+              justify-content: space-between;
+
+              &::before {
+                content: "";
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                // background-image: url("^/button/file-loading.png");
+                background-size: 100% 100%;
+                animation: spin 1s linear infinite;
+              }
+            }
+
+            &.error {
+              // background-image: url("^/button/file-error.png");
+            }
+
+            &.success {
+              // background-image: url("^/button/file-success.png");
+            }
+
+            &.waiting {
+              // background-image: url("^/button/file-waiting.png");
+            }
+          }
+
+          .delete {
+            font-family: "SourceHanSansCN";
+            font-weight: 400;
+            font-size: 14px;
+            color: #ff5050;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-button {
+  width: 100%;
+  height: 36px;
+  background-color: transparent;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 9px;
+
+  div {
+    height: 22px;
+
+    &:not(.input-div) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .input-div {
+    flex: 1;
+    padding-right: 9px;
+    font-family: "SourceHanSansCN";
+    font-size: 14px;
+    color: #e3e3e3;
+    line-height: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .progress {
+    width: 0px;
+    height: 16px;
+    line-height: 16px;
+    background-size: 16px 16px;
+    margin-right: 9px;
+    background-repeat: no-repeat;
+    text-align: right;
+
+    &.loading {
+      width: 46px;
+      font-family: "SourceHanSansCN";
+      font-weight: 500;
+      font-size: 12px;
+      color: #51a8ff;
+      display: flex;
+      justify-content: space-between;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        // background-image: url("^/button/file-loading.png");
+        background-size: 100% 100%;
+        animation: spin 1s linear infinite;
+      }
+    }
+
+    &.error {
+      width: 16px;
+      // background-image: url("^/button/file-error.png");
+    }
+
+    &.success {
+      width: 16px;
+      // background-image: url("^/button/file-success.png");
+    }
+
+    &.waiting {
+      width: 46px;
+      font-family: "SourceHanSansCN";
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      // background-image: url("^/button/file-waiting.png");
+    }
+  }
+
+  .select-file {
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background-image: url("^/uplaod.png");
+    background-size: 100% 100%;
+  }
+}
+
+.img-upload {
+  width: 142px;
+  height: 76px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #646464;
+
+  .el-upload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: calc(100% - 2px);
+      max-height: calc(100% - 2px);
+      border-radius: 4px;
+    }
+    .upload-div {
+      width: 100%;
+      height: 100%;
+      i {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url("^/button/upload.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px 32px;
+      }
+      div {
+        width: 100%;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        font-family: "SourceHanSansCN";
+        font-size: 14px;
+        color: #666666;
+
+        &:nth-child(2) {
+          color: #b8b8b8;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &.bottom {
+    .el-upload {
+      .uploading {
+        width: 100%;
+        height: 100%;
+        // background-image: url("^/button/uploading.png");
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: calc(50% - 4px);
+        background-size: 48px 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 90px;
+        justify-content: flex-end;
+        font-family: "SourceHanSansCN";
+        font-size: 14px;
+        color: #51a8ff;
+
+        .el-progress {
+          width: 100%;
+
+          .el-progress-bar__outer {
+            background-color: rgba(116, 115, 115, 1);
+            border-radius: 0 0 3px 3px;
+
+            .el-progress-bar__inner {
+              background-color: rgba(81, 168, 255, 1);
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.el-overlay-message-box {
+  .el-message-box {
+    background: #303030;
+    border-radius: 2px;
+    padding: 16px;
+    padding-bottom: 24px;
+    .el-message-box__header {
+      font-family: AlibabaPuHuiTiM;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      padding-bottom: 16px;
+      .el-message-box__title {
+        line-height: normal;
+      }
+    }
+    .el-message-box__header.show-close {
+      padding-left: 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      span {
+        font-family: AlibabaPuHuiTiM;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .el-message-box__headerbtn {
+        width: 26px;
+        height: 26px;
+        border-radius: 4px;
+        top: 17px;
+        right: 17px;
+
+        i {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+
+    .el-message-box__message {
+      padding-left: 0px;
+      font-family: AlibabaPuHuiTiM;
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .el-message-box__content {
+      padding: 73px 16px;
+    }
+    .el-message-box__container {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+.grid {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-image: url("^/ping-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &.pure {
+    background-color: rgba(25, 27, 31, 1);
+    background-image: unset;
+  }
+
+  .operate {
+    height: 56px;
+    padding-top: 18px;
+    text-align: right;
+    padding-right: 24px;
+    margin-bottom: 16px;
+
+    .search-div {
+      float: left;
+      padding-left: 22px;
+      display: flex;
+      align-items: center;
+    }
+
+    :deep(.el-input) {
+      width: 260px;
+      margin-right: 10px;
+      height: 36px;
+      background-color: transparent;
+      border-radius: 4px;
+      align-items: center;
+
+      .el-input__wrapper {
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 1px #646464;
+
+        .el-input__inner {
+          font-family: AlibabaPuHuiTiR;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+
+      .el-input-group__append {
+        height: 38px;
+        box-shadow: none;
+        border: 1px solid #646464;
+        border-left: none;
+        background-color: #0f8dff;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        svg {
+          color: #fff;
+        }
+      }
+    }
+
+    :deep(.el-select) {
+      width: 200px;
+      margin-right: 10px;
+      height: 36px;
+      background-color: transparent;
+      border-radius: 4px;
+
+      .el-select__wrapper {
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 0 1px #646464;
+
+        .el-select__selected-item {
+          font-family: AlibabaPuHuiTiR;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    :deep(.el-checkbox) {
+      margin-right: 16px;
+
+      .el-checkbox__input {
+        .el-checkbox__inner {
+          width: 14px;
+          height: 14px;
+
+          &::after {
+            width: 3px;
+            height: 7px;
+            left: 4px;
+            top: 1px;
+          }
+        }
+      }
+
+      .el-checkbox__label {
+        font-family: AlibabaPuHuiTiR;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .step-div {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 17px;
+    padding-left: 24px;
+  }
+
+  .list {
+    height: calc(100% - 72px - 65px - 10px);
+    padding-left: 24px;
+    margin-bottom: 10px;
+
+    &.has-step {
+      height: calc(100% - 72px - 37px - 65px - 10px);
+    }
+
+    :deep(.el-scrollbar) {
+      .el-scrollbar__wrap {
+        .el-scrollbar__view {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+        }
+      }
+    }
+
+    .grid-item {
+      flex-basis: calc(25% - 24px); /* 每个子元素占 25% 的宽度 */
+      flex-shrink: 1; /* 子元素可以缩小以适应父元素的宽度 */
+      height: 257px;
+      background-color: #181818;
+      box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.12);
+      border-radius: 5px;
+      border: 1px solid rgba(154, 154, 154, 0.3);
+
+      & > div {
+        width: 100%;
+        &.thumbnail {
+          width: calc(100% - 20px);
+          height: 206px;
+          background-color: rgba(78, 78, 78, 0.3);
+          box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.12);
+          border-radius: 5px;
+          margin: auto;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          cursor: pointer;
+        }
+        &.grid-name {
+          height: 41px;
+          border-radius: 0 0 6px 6px;
+          display: flex;
+          padding-left: 15px;
+          padding-right: 8px;
+          display: flex;
+          align-items: center;
+
+          .name {
+            font-family: AlibabaPuHuiTiR;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 1);
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 10px;
+            height: 41px;
+            line-height: 41px;
+          }
+
+          .item-operate {
+            display: flex;
+            color: rgba(255, 255, 255, 1);
+            align-items: center;
+
+            & > .el-button + .el-button {
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .page {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  :deep(.el-loading-mask) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes cricl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

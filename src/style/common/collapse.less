@@ -1,0 +1,75 @@
+.resource-collapse {
+  &.el-collapse {
+    width: 100%;
+    // background-color: #fff;
+    margin-top: 10px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    .el-collapse-item__header {
+      padding: 0px 16px 0px 36px;
+      background-color: transparent;
+      border-bottom-color: transparent;
+      text-align: left;
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: normal;
+    }
+    .el-collapse-item {
+      position: relative;
+      //height: @collapse-header;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      &.is-active {
+        // height: calc(100% - @collapse-header - @collapse-header);
+      }
+
+      .el-collapse-item__header {
+        height: 40px;
+        line-height: 40px;
+      }
+      .el-collapse-item__wrap {
+        // height: calc(100% - @collapse-header);
+        transition: none;
+        background-color: transparent;
+        .el-collapse-item__content {
+          height: 100%;
+          padding-bottom: 0;
+
+          .el-scrollbar {
+            .el-scrollbar__wrap {
+              .el-scrollbar__view {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .el-collapse-item__wrap {
+      border-bottom-color: transparent;
+    }
+    .el-collapse-item__arrow {
+      // display: none;
+      position: absolute;
+      left:16px;
+    }
+  }
+  .header-main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .header-main-title {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap; /* 确保文本在一行内显示 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    text-overflow: ellipsis; /* 使用省略号表示文本溢出 */
+    margin-right:24px;
+  }
+  .header-op-right {
+    line-height: normal;
+  }
+}

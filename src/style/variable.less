@@ -1,0 +1,33 @@
+.background-image (@url, @size, @position, @repeat) {
+  background-image: url(@url);
+  background-repeat: @repeat;
+  background-size: @size;
+  background-position: @position;
+}
+
+.font-size (@size, @color) {
+  font-size: @size;
+  color: @color;
+}
+
+.no-data(@size, @y) {
+  background-image: url("^/no-data.png");
+  background-size: @size;
+  background-position-x: center;
+  background-position-y: @y;
+  background-repeat: no-repeat;
+}
+
+.no-data-bofore(@y) {
+  content: attr(text);
+  position: absolute;
+  top: calc(50% + @y);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overflow-label() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

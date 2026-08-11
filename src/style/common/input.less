@@ -1,0 +1,121 @@
+@inputHeight: 24px;
+@selectInputHeight: 14px;
+.custom-input {
+  &.el-input {
+    line-height: @inputHeight;
+    .el-input__wrapper {
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .el-input__inner {
+      height: @inputHeight;
+    }
+    .el-input__wrapper {
+      border-radius: 2px;
+      height: @inputHeight;
+      line-height: @inputHeight;
+    }
+    input {
+      background-color: transparent;
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
+}
+
+.custom-input-number {
+  &.el-input-number {
+    .el-input__wrapper {
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      height: @inputHeight;
+      line-height: @inputHeight;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .el-input__inner {
+      height: @inputHeight;
+    }
+    input {
+      background-color: transparent;
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: #ffffff;
+    }
+    .el-input__inner {
+      text-align: left;
+    }
+  }
+}
+
+.custom-select {
+  &.el-select {
+    .el-select__placeholder {
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: #ffffff;
+    }
+    .el-select__wrapper {
+      min-height: @inputHeight;
+      line-height: @selectInputHeight;
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
+      padding: 0px 12px;
+      &.is-hovering {
+        box-shadow: none;
+      }
+    }
+    .el-select__input {
+      height: @selectInputHeight;
+    }
+
+    .el-select__suffix {
+      .el-icon {
+        font-size: 16px;
+      }
+    }
+
+    .el-select__input {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.custom-color-picker {
+  &.el-color-picker {
+    .el-color-picker__trigger {
+      border: none;
+
+      .el-color-picker__color {
+        width: 36px;
+        height: 24px;
+        border: 1px solid #979797;
+        border-radius: 2px;
+        .el-color-picker__color-inner {
+          .el-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-form-item__content .custom-input {
+  height: 100%;
+  &.el-input {
+    height: 100%;
+    .el-input__wrapper {
+      height: 100%;
+    }
+  }
+}

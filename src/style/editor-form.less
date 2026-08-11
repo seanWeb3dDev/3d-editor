@@ -1,0 +1,230 @@
+@import url("@/style/common/input.less");
+.fieldBackgroundBorder {
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: unset !important;
+  border-radius: 2px;
+}
+
+.fieldInput {
+  font-family: AlibabaPuHuiTiR;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.fieldTip {
+  font-family: AlibabaPuHuiTiR;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field {
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  padding: 0px 16px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  &.relateStyle {
+    flex-direction: column;
+    align-items: baseline;
+    & > span {
+      margin-bottom: 12px;
+    }
+  }
+  &.alignUnSet {
+    align-items: unset;
+    & > span {
+      margin-top: 4px;
+    }
+  }
+  & > span {
+    width: 17%;
+    display: inline-block;
+    margin-right: 23px;
+    .fieldTip;
+
+    &.min {
+      width: 90px;
+      margin-right: 0;
+    }
+
+    &.overflow-label {
+      .overflow-label();
+    }
+  }
+
+  p {
+    width: 10px;
+    margin: 0 10px;
+    .fieldTip;
+  }
+
+  & > div {
+    flex: 1;
+  }
+
+  .el-input {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .el-input__prefix {
+      margin-right: 10px;
+    }
+
+    &.is-disabled {
+      .el-input__wrapper {
+        background-color: rgba(30, 31, 30, 0.5);
+      }
+    }
+  }
+
+  .el-checkbox {
+    width: 20px;
+    height: 20px;
+
+    &.rem-checkbox {
+      width: auto;
+    }
+
+    .el-checkbox__input {
+      width: 20px;
+      height: 100%;
+
+      .el-checkbox__inner {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: unset;
+        background-color: #464646;
+        border-radius: 4px;
+        border: 1px solid #646464;
+
+        &::after {
+          left: 9px;
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+
+      &.is-checked {
+        .el-checkbox__inner {
+          background-color: #409eff;
+        }
+      }
+    }
+
+    .el-checkbox__label {
+      margin-left: 5px;
+      .fieldTip;
+    }
+  }
+
+  .input-button {
+    width: 210px;
+
+    .input-div {
+      max-width: 85px;
+    }
+  }
+  .color-picker {
+    .fieldBackgroundBorder;
+    flex: 1;
+    display: flex;
+    .fieldInput;
+    border: 0;
+    .color-text {
+      display: inline-block;
+      flex: 1;
+      height: 30px;
+      line-height: 30px;
+      padding-left: 5px;
+    }
+  }
+
+  .img-upload-div {
+    width: 100px;
+    height: 100px;
+
+    .img-upload {
+      width: 100%;
+      height: 100%;
+      .background-image("^/button/upload.png",56px 32px, center center, no-repeat);
+    }
+  }
+
+  & > div {
+    .el-input {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.el-popper.el-color-picker__panel {
+  background: #282828;
+  box-shadow:
+    2px 0px 6px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 0px 4px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+
+  .el-color-dropdown__btns {
+    .el-button {
+      display: none;
+    }
+  }
+
+  .el-input {
+    height: 36px;
+    background-color: transparent;
+    border-radius: 4px;
+
+    .el-input__wrapper {
+      background-color: transparent;
+      box-shadow: 0 0 0 1px #646464;
+
+      input {
+        font-family: AlibabaPuHuiTiR;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.event-tab-panel {
+  padding: 0px 16px 0px;
+}
+
+.el-switch {
+  font-size: 14px;
+  height: 32px;
+  line-height: 20px;
+
+  .el-switch__core {
+    border-radius: 10px;
+    height: 20px;
+    min-width: 40px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+
+    .el-switch__action {
+      height: 16px;
+      left: 1px;
+      width: 16px;
+    }
+  }
+
+  &.is-checked .el-switch__core {
+    background-color: rgba(15, 141, 255, 1);
+
+    .el-switch__action {
+      left: calc(100% - 17px);
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.tool-bar-popover {
+  &.el-popper.el-dropdown__popper.is-light {
+    background-color: #282828;
+    box-shadow:
+      2px 0px 6px 0px rgba(0, 0, 0, 0.6),
+      inset 0px 0px 4px 0px rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.23);
+  }
+
+  .el-dropdown-menu {
+    padding: 8px 12px;
+  }
+  &.el-popper.el-dropdown__popper.is-light .el-dropdown-menu .el-dropdown-menu__item:hover,
+  &.el-popper.el-dropdown__popper.is-light .el-dropdown-menu .el-dropdown-menu__item:focus {
+    background-color: transparent;
+  }
+  .el-dropdown-menu__item {
+    line-height: normal;
+    padding: 8px 12px;
+    .label {
+      min-width: 56px;
+      font-family: AlibabaPuHuiTiR;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-right: 12px;
+    }
+  }
+}
+
+.mater-tools-popper {
+  &.el-popover {
+    width: 156px !important;
+    min-width: unset;
+  }
+  &.el-popover.el-popper {
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 0;
+    box-shadow:
+      2px 0px 6px 0px rgba(0, 0, 0, 0.6),
+      inset 0px 0px 4px 0px rgba(0, 0, 0, 0.8);
+  }
+  &.el-popper.is-light,
+  .el-popper.is-light > &.el-popper__arrow:before {
+    border: 1px solid rgba(255, 255, 255, 0.23);
+  }
+
+  .mater-main-container {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+
+    .btn-group-toolbar {
+      padding: 8px 16px 0;
+      background-color: #282828;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+      .el-button + .el-button {
+        margin-left: unset;
+      }
+    }
+    .mater-list-main-container {
+      flex: 1;
+      overflow: auto;
+      padding-top: 7px;
+      background-color: #282828;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+      .list {
+        cursor: pointer;
+        font-family: AlibabaPuHuiTiR;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 0px 8px;
+        height: 24px;
+        line-height: 24px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span{
+          display: inline-block;
+          max-width: 200px;
+          overflow: hidden;
+          margin-right: 10px;
+          text-overflow: ellipsis;
+        }
+
+        &:hover,
+        &.active {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 2px;
+        }
+      }
+    }
+    .footer {
+      width: 100%;
+
+      & > div {
+        width: 100%;
+
+        &:not(:nth-child(2)) {
+          height: 6px;
+          background-color: #282828;
+        }
+
+        &:nth-child(2) {
+          display: flex;
+          height: 56px;
+
+          & > div:not(:nth-child(2)) {
+            background-color: #282828;
+            height: 100%;
+            width: calc(50% - 28px);
+          }
+        }
+      }
+      .cavImage {
+        width: 56px;
+        height: 56px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
