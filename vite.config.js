@@ -45,6 +45,6 @@ export default defineConfig({
     },
   },
   server: {
-    hmr: false,
+    hmr: true,
   },
 });
