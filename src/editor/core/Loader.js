@@ -3,7 +3,6 @@ import { Editor } from "./Editor";
 import { GLTFLoader } from "../library/GLTFLoader";
 import { LoadingManager } from "three";
 import { LoaderUtils } from "./LoaderUtils";
-import { saveObject3dImage } from "./offscreenRendering";
 
 
 export class Loader {

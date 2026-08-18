@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "2.3.1",
-    "3dEditor-glb-process": "^1.1.7",
     "axios": "1.2.2",
     "default-passive-events": "2.0.0",
     "element-plus": "2.9.1",
