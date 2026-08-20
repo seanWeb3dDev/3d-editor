@@ -12,6 +12,8 @@ const _dirname = path.dirname(fileName);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // GitHub Pages 部署在子路径 /3d-editor/ 下，通过环境变量注入；本地开发不传则默认 /
+  base: process.env.VITE_BASE || "/",
   plugins: [
     vue(),
     AutoImport({
